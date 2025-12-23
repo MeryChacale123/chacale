@@ -1,0 +1,548 @@
+/* Reset e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    color: #1a1a1a;
+}
+
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #ff6600, #ff8533);
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+header {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+}
+
+
+/* HERO / CAPA ANIMADA */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    animation: trocarCapa 18s infinite;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.hero p {
+    opacity: 0.8;
+}
+
+.btn-principal {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #25D366;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    transform: scale(1.05);
+}
+
+.servicos {
+    background: #ffffff;
+}
+
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.card.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card:nth-child(1).reveal.active { transition-delay: 0.1s; }
+.card:nth-child(2).reveal.active { transition-delay: 0.2s; }
+.card:nth-child(3).reveal.active { transition-delay: 0.3s; }
+
+
+/* REDES SOCIAIS */
+.redes-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffefd5;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.redes-container h2 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.redes-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.redes-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.redes-links a img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.redes-links a img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.localizacao {
+    font-style: italic;
+    color: #666;
+    font-size: 16px;
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+    50% { transform: scale(1.1); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+    100% { transform: scale(1); box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+}
+
+.whatsapp-float {
+    animation: pulse 2s infinite;
+}
+
+
+/* RODAPÉ */
+.footer {
+    background: linear-gradient(135deg, #ff6600, #ffcc33); /* gradiente laranja e amarelo vivo */
+    padding: 25px;
+    text-align: center;
+    color: #000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+}
+
+.footer a {
+    color: #111;
+    font-size: 22px;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #ffd700; /* amarelo brilhante ao passar o mouse */
+}
+
+
+@keyframes trocarCapa {
+    0% {
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("imagens/design2.jpg");
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    33% {
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("imagens/design1.jpg");
+        opacity: 0;
+    }
+    43% { opacity: 1; }
+    66% {
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("imagens/design4.jpg");
+        opacity: 0;
+    }
+    76% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.sobre-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffb366, #ff8533);
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.sobre-container h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #fff8dc;
+}
+
+.sobre-container p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.sobre-container .orcamento {
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: #25D366;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.sobre-container .orcamento:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+.revelar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.revelar.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+.contato {
+    padding: 80px 10%;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+.contato form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato input,
+.contato textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+.contato button {
+    padding: 15px;
+    background: #25D366;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.seo-local {
+    display: none;
+}
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        padding: 0 20px;
+    }
+
+    .btn-principal {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .servicos {
+        padding: 60px 5%;
+        gap: 20px;
+    }
+
+    .porta img {
+        height: 160px;
+    }
+
+    .equipe h2,
+    .contato h2 {
+        font-size: 2rem;
+    }
+
+    .membro {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+.numeros {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px 10%;
+    background: #0d0d0d;
+    color: white;
+    text-align: center;
+}
+
+.numeros h3 {
+    font-size: 2.5rem;
+    color: #25D366;
+}
+.cta {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #000, #111);
+    text-align: center;
+    color: white;
+}
+.rodape {
+    padding: 30px;
+    background: #000;
+    text-align: center;
+    color: #777;
+}
+.topo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.menu-mobile {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #000;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 15px;
+        border-bottom: 1px solid #222;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+}
+.servico-detalhe {
+    padding: 80px 10%;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+.servico-detalhe p {
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+/* EQUIPE / CONHEÇA NOSSA EQUIPE */
+.equipe {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #ff6600, #ffcc33); /* mesmo gradiente do rodapé */
+    color: #000; /* texto escuro para contraste */
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.equipe h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff8dc; /* título destacado */
+}
+.membro {
+    background: #fff3e6;
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    transition: transform 0.5s, box-shadow 0.5s, opacity 0.5s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.membro.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.membros {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.membro {
+    background: #fff3e6; /* cards claros para contraste com fundo gradiente */
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    transition: 0.4s;
+}
+
+.membro img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.membro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  .membros {
+      flex-direction: column;
+      align-items: center;
+  }
+  .servicos-container {
+      grid-template-columns: 1fr;
+  }
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+  .hero h2 {
+      font-size: 1.5rem;
+  }
+}
+a, .btn-principal, .orcamento {
+    transition: all 0.3s ease;
+}
+
+a:hover, .btn-principal:hover, .orcamento:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
